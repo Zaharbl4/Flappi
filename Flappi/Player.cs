@@ -22,7 +22,7 @@ namespace Flappi//https://vk.com/video-101965347_456276553
 
         public Player(int x, int y)
         {   //фаил текстуры птицы
-            birdImg = new Bitmap("C:\\Users\\User\\Desktop\\project timer\\bird.png");
+            birdImg = new Bitmap("C:\\Users\\User\\Desktop\\бесполезное програмирование\\Flappi\\Flappi\\textures\\bird.png");
             this.x = x;
             this.y = y;
             size = 50;

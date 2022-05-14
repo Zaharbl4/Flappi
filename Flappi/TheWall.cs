@@ -9,6 +9,9 @@ namespace Flappi
 {
     internal class TheWall
     {
+   
+
+
         public int x;
         public int y;
         public int sizeX;
@@ -19,7 +22,7 @@ namespace Flappi
 
         public TheWall(int x, int y,bool isRotatedImage=false)
         {   //фаил текстуры трубы
-            theWallImg = new Bitmap("C:\\Users\\User\\Desktop\\project timer\\tube.png");
+            theWallImg = new Bitmap("C:\\Users\\User\\Desktop\\бесполезное програмирование\\Flappi\\Flappi\\textures\\tube.png");
             this.x = x;
             this.y = y;
             sizeX = 80;
