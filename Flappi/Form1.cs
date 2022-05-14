@@ -21,7 +21,8 @@ namespace Flappi
         TheWall wall5;
         TheWall wall6;
         float graviti;
-
+        int a;
+        internal int A { get => a; set => a = value; }
         public Form1()
         {
             InitializeComponent();
@@ -40,48 +41,43 @@ namespace Flappi
 
         public void Init()//функция инициализации объектов
         {
-            Bird = new Player(100, 200);
+            Bird = new Player(150, 200);
                
-            wall1 = new TheWall(400,-200,true);
-            wall2 = new TheWall(400, 300);
+            wall1 = new TheWall(425,-200,true);
+            wall2 = new TheWall(425, 300);
 
-            wall3 = new TheWall(800, -200, true);
-            wall4 = new TheWall(800, 300);
+            wall3 = new TheWall(865, -200, true);
+            wall4 = new TheWall(865, 300);
 
-            wall5 = new TheWall(1150, -200, true);
-            wall6 = new TheWall(1150, 300);
+            wall5 = new TheWall(1282, -200, true);
+            wall6 = new TheWall(1282, 300);
 
             timer1.Interval = 10;//частота обновления движения, гравитации
             timer1.Tick += new EventHandler(update);
             timer1.Start();
 
-            timer2.Interval = 5500;//частота обновления генерации труб
-            timer2.Tick += new EventHandler(NewWall);
-            timer2.Start();
+           
 
-           /* timer3.Interval = 4500;//частота обновления генерации труб
-            timer3.Tick += new EventHandler(NewWall);
-            timer3.Start();
+           
 
-            timer4.Interval = 2500;//частота обновления генерации труб
-            timer4.Tick += new EventHandler(NewWall);
-            timer4.Start();*/
+           
 
 
         }
         //функция обновления обектов
         private void update(object? sender, EventArgs e)
         {
-            if (bird.gravitiValue != 0.1f)//реализация прыжков
-                bird.gravitiValue += 0.005f;
+           // if (bird.gravitiValue != 0.1f)//
+              //  bird.gravitiValue += 0.005f;
             
 
-            
-            graviti+= bird.gravitiValue;//реализация 
-            bird.y += graviti;          //гравитации
+
+           // graviti += bird.gravitiValue;//реализация 
+            //bird.y += graviti;          //гравитации
             MoveWalls();
             Invalidate();
-            
+           
+
         }
 
         private void Collide(Player bird, TheWall wall1, TheWall wall2, TheWall wall3,TheWall wall4)
@@ -89,59 +85,58 @@ namespace Flappi
 
         }
 
-        private void NewWall(object? sender, EventArgs e)//генерация труб
+        private void NewWall()//генерация труб
         {
             Random r= new Random();
             int y1;
             int y2;
             int y3;
             int y4;
+            int y5;
             bool s = false;
-            y1 = r.Next(-90,90);
-            y2 = r.Next(-90,90);
-            y3 = r.Next(-90,90);
+            y1 = r.Next(-75,72);
+            y2 = r.Next(-74,73);
+            y3 = r.Next(-71,76);
 
-            y4 = r.Next(1,70);
-
-            if (s )//wall1.x+160<bird.x
+            y4 = r.Next(-10,35);
+            y5 = r.Next(-4, 3);
+            if ( wall2.x<bird.x-220)//
             {
-                wall1 = new TheWall(1003, -200-y1-y4, true);
-                wall2 = new TheWall(1003, 300-y1);
+                wall1 = new TheWall(1195 - y5, -200-y1, true);
+                wall2 = new TheWall(1195 - y5, 300-y1-y4);
 
             }
-            if (s)//wall3.x+160 < bird.x
+            if (wall3.x< bird.x - 220)//
             {
-                wall3 = new TheWall(992, -200-y2-y4, true);
-                wall4 = new TheWall(992, 300-y2);
+                wall3 = new TheWall(1195 - y5, -200-y2, true);
+                wall4 = new TheWall(1195 - y5, 300-y2-y4);
 
             }
-            if (s)//wall6.x + 160 < bird.x
+            if (wall6.x  < bird.x - 220)//
             {
-                wall5 = new TheWall(800, -200 - y3-y4, true);
-                wall6 = new TheWall(800, 300 - y3);
+                wall5 = new TheWall(1195 - y5, -200 - y3-y4, true);
+                wall6 = new TheWall(1195 - y5, 300 - y3);
 
             }
-           
-
-
-            wall5 = new TheWall(1150, -200 - y3 , true);
-            wall6 = new TheWall(1150, 300 - y3- y4);
-
-
+            
         }
+
+
+
         //функция движения труб
         private void MoveWalls()
         {
-            wall1.x -= 2;
-            wall2.x -= 2;
+            wall1.x -= 5;
+            wall2.x -= 5;
 
-            wall3.x -= 2;
-            wall4.x -= 2;
+            wall3.x -= 5;
+            wall4.x -= 5;
 
-            wall5.x -= 2;
-            wall6.x -= 2;
+            wall5.x -= 5;
+            wall6.x -= 5;
+            NewWall();
 
-            //newWall();
+
 
         }
 
@@ -156,7 +151,7 @@ namespace Flappi
             graphics.DrawImage(wall3.theWallImg, wall3.x, wall3.y, wall3.sizeX, wall3.sizeY);
             graphics.DrawImage(wall4.theWallImg, wall4.x, wall4.y, wall4.sizeX, wall4.sizeY);
 
-            graphics.DrawImage(wall5.theWallImg, wall5.x, wall5.y, wall5.sizeX, wall5.sizeY);
+           graphics.DrawImage(wall5.theWallImg, wall5.x, wall5.y, wall5.sizeX, wall5.sizeY);
             graphics.DrawImage(wall6.theWallImg, wall6.x, wall6.y, wall6.sizeX, wall6.sizeY);
 
 
