@@ -11,10 +11,12 @@ namespace Flappi//https://vk.com/video-101965347_456276553
 {
      class Player
     {
-        public  int x;
-        public int y;
+        public  float x;
+        public float y;
         public int size;
         public Image birdImg;
+        public float gravitiValue;
+
 
 
 
@@ -24,6 +26,7 @@ namespace Flappi//https://vk.com/video-101965347_456276553
             this.x = x;
             this.y = y;
             size = 50;
+            gravitiValue = 0.4f;
         }
     }
 }

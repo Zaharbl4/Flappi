@@ -17,13 +17,15 @@ namespace Flappi
 
 
 
-        public TheWall(int x, int y)
+        public TheWall(int x, int y,bool isRotatedImage=false)
         {   //фаил текстуры трубы
             theWallImg = new Bitmap("C:\\Users\\User\\Desktop\\project timer\\tube.png");
             this.x = x;
             this.y = y;
             sizeX = 80;
             sizeY = 300;
+            if (isRotatedImage)
+                theWallImg.RotateFlip(RotateFlipType.Rotate180FlipNone);
         }
     }
 }
