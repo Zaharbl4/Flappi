@@ -36,13 +36,18 @@ namespace Flappi
             Wall1 = new TheWall(300,-200,true);
             Wall2 = new TheWall(300, 300);
 
-            timer1.Interval = 1;
+            timer1.Interval = 10;
             timer1.Tick += new EventHandler(update);
             timer1.Start();
         }
 
         private void update(object? sender, EventArgs e)
         {
+            if (bird.gravitiValue != 0.1f)
+                bird.gravitiValue += 0.005f;
+            
+
+            
             graviti+= bird.gravitiValue;
             bird.y += graviti;
             Invalidate();
@@ -62,6 +67,12 @@ namespace Flappi
           
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            graviti = 0;
+            bird.gravitiValue = -0.15f;
         }
     }
 }

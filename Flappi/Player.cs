@@ -26,7 +26,7 @@ namespace Flappi//https://vk.com/video-101965347_456276553
             this.x = x;
             this.y = y;
             size = 50;
-            gravitiValue = 0.4f;
+            gravitiValue = 0.1f;
         }
     }
 }
