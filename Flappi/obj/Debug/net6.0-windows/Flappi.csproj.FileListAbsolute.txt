@@ -1,0 +1,17 @@
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\bin\Debug\net6.0-windows\Flappi.exe
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\bin\Debug\net6.0-windows\Flappi.deps.json
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\bin\Debug\net6.0-windows\Flappi.runtimeconfig.json
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\bin\Debug\net6.0-windows\Flappi.dll
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\bin\Debug\net6.0-windows\Flappi.pdb
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.Form1.resources
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.csproj.GenerateResource.cache
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.AssemblyInfo.cs
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.dll
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\refint\Flappi.dll
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.pdb
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.genruntimeconfig.cache
+C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\ref\Flappi.dll
