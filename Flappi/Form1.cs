@@ -22,6 +22,7 @@ namespace Flappi
         TheWall wall6;
         float graviti;
         int a;
+        int speed = 2;
         internal int A { get => a; set => a = value; }
         public Form1()
         {
@@ -30,7 +31,7 @@ namespace Flappi
             Invalidate();
         }
         //инкапсуляция мать её
-        internal Player Bird { get => bird; set => bird = value; }
+        internal Player Bird { get => bird; set => bird = value; }       
         internal TheWall Wall1 { get => wall1; set => wall1 = value; }  
         internal TheWall Wall2 { get => wall2; set => wall2 = value; }
         internal TheWall Wall3 { get => wall3; set => wall3 = value; }
@@ -67,22 +68,59 @@ namespace Flappi
         //функция обновления обектов
         private void update(object? sender, EventArgs e)
         {
-           // if (bird.gravitiValue != 0.1f)//
-              //  bird.gravitiValue += 0.005f;
+          
+
+
+            if ( (Collide(bird, wall1))|| (Collide(bird, wall2)) || (Collide(bird, wall3))|| (Collide(bird, wall4))|| (Collide(bird, wall5))|| (Collide(bird, wall6)))
+            {
+                bird.isAlive = false;
+                //timer1.Stop();
+                //Init();
+            }
+                
             
+             if (bird.gravitiValue != 0.1f)
+             
+                bird.gravitiValue += 0.005f;
+                 graviti += bird.gravitiValue;//реализация 
+                 bird.y += graviti; 
 
-
-           // graviti += bird.gravitiValue;//реализация 
-            //bird.y += graviti;          //гравитации
-            MoveWalls();
-            Invalidate();
            
+                    //гравитации
+               if (bird.isAlive)
+                { 
+
+            
+                MoveWalls();
+
+                }
+                
+              
+            Invalidate();
+             
 
         }
 
-        private void Collide(Player bird, TheWall wall1, TheWall wall2, TheWall wall3,TheWall wall4)
-        {
+        private bool Collide(Player bird, TheWall wall1 )
+            
+        {   
+            //предположительно рабочее решение функции столкновения
+            //(bird.x+bird.size / 2) - (wall1.x+wall1.sizeX / 2);     
+            //(bird.size + bird.y / 2) - (wall1.sizeY + wall1.y / 2);
+            PointF delta = new PointF();
+            delta.X = (bird.x + bird.size / 2) - (wall1.x + wall1.sizeX / 2);
+            delta.Y = (bird.size + bird.y / 2) - (wall1.sizeY + wall1.y / 2);
 
+
+            if (Math.Abs(delta.X) <=60)
+            { 
+                     if (Math.Abs(delta.Y) <= 25+ wall1.sizeY/2)
+                    {
+                    return true;
+                    }
+
+            }
+                    return false;
         }
 
         private void NewWall()//генерация труб
@@ -126,14 +164,14 @@ namespace Flappi
         //функция движения труб
         private void MoveWalls()
         {
-            wall1.x -= 5;
-            wall2.x -= 5;
+            wall1.x -= speed;
+            wall2.x -= speed;
 
-            wall3.x -= 5;
-            wall4.x -= 5;
+            wall3.x -= speed;
+            wall4.x -= speed;
 
-            wall5.x -= 5;
-            wall6.x -= 5;
+            wall5.x -= speed;
+            wall6.x -= speed;
             NewWall();
 
 
@@ -151,7 +189,7 @@ namespace Flappi
             graphics.DrawImage(wall3.theWallImg, wall3.x, wall3.y, wall3.sizeX, wall3.sizeY);
             graphics.DrawImage(wall4.theWallImg, wall4.x, wall4.y, wall4.sizeX, wall4.sizeY);
 
-           graphics.DrawImage(wall5.theWallImg, wall5.x, wall5.y, wall5.sizeX, wall5.sizeY);
+            graphics.DrawImage(wall5.theWallImg, wall5.x, wall5.y, wall5.sizeX, wall5.sizeY);
             graphics.DrawImage(wall6.theWallImg, wall6.x, wall6.y, wall6.sizeX, wall6.sizeY);
 
 
@@ -162,8 +200,17 @@ namespace Flappi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            graviti = 0;
-            bird.gravitiValue = -0.125f;
+            //if (bird.isAlive)
+            //{
+              graviti = 0;
+              bird.gravitiValue = -0.125f;
+           // }
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
-}
+} 

@@ -16,6 +16,7 @@ namespace Flappi//https://vk.com/video-101965347_456276553
         public int size;
         public Image birdImg;
         public float gravitiValue;
+        public bool isAlive;
 
 
 
@@ -27,6 +28,7 @@ namespace Flappi//https://vk.com/video-101965347_456276553
             this.y = y;
             size = 50;
             gravitiValue = 0.1f;
+            isAlive = true;
         }
     }
 }

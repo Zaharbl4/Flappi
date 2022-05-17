@@ -28,7 +28,7 @@ namespace Flappi
             sizeX = 80;
             sizeY = 300;
             if (isRotatedImage)
-                theWallImg.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                theWallImg.RotateFlip(RotateFlipType.Rotate180FlipNone);//
         }
     }
 }
