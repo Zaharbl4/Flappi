@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\бесполезное програмирование\\Flappi\\Flappi\\Flappi.csproj": {}
+    "C:\\Users\\zahar\\OneDrive\\Рабочий стол\\бесполезное програмирование\\Flappi\\Flappi\\Flappi\\Flappi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\бесполезное програмирование\\Flappi\\Flappi\\Flappi.csproj": {
+    "C:\\Users\\zahar\\OneDrive\\Рабочий стол\\бесполезное програмирование\\Flappi\\Flappi\\Flappi\\Flappi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\бесполезное програмирование\\Flappi\\Flappi\\Flappi.csproj",
+        "projectUniqueName": "C:\\Users\\zahar\\OneDrive\\Рабочий стол\\бесполезное програмирование\\Flappi\\Flappi\\Flappi\\Flappi.csproj",
         "projectName": "Flappi",
-        "projectPath": "C:\\Users\\User\\Desktop\\бесполезное програмирование\\Flappi\\Flappi\\Flappi.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\бесполезное програмирование\\Flappi\\Flappi\\obj\\",
+        "projectPath": "C:\\Users\\zahar\\OneDrive\\Рабочий стол\\бесполезное програмирование\\Flappi\\Flappi\\Flappi\\Flappi.csproj",
+        "packagesPath": "C:\\Users\\zahar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zahar\\OneDrive\\Рабочий стол\\бесполезное програмирование\\Flappi\\Flappi\\Flappi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zahar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

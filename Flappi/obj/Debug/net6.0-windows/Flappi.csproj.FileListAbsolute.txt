@@ -15,3 +15,20 @@ C:\Users\User\Desktop\бесполезное програмирование\Flap
 C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.pdb
 C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.genruntimeconfig.cache
 C:\Users\User\Desktop\бесполезное програмирование\Flappi\Flappi\obj\Debug\net6.0-windows\ref\Flappi.dll
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\bin\Debug\net6.0-windows\Flappi.exe
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\bin\Debug\net6.0-windows\Flappi.deps.json
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\bin\Debug\net6.0-windows\Flappi.runtimeconfig.json
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\bin\Debug\net6.0-windows\Flappi.dll
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\bin\Debug\net6.0-windows\Flappi.pdb
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.csproj.AssemblyReference.cache
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.Form1.resources
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.csproj.GenerateResource.cache
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.AssemblyInfoInputs.cache
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.AssemblyInfo.cs
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.csproj.CoreCompileInputs.cache
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.dll
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\obj\Debug\net6.0-windows\refint\Flappi.dll
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.pdb
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\obj\Debug\net6.0-windows\Flappi.genruntimeconfig.cache
+C:\Users\zahar\OneDrive\Рабочий стол\бесполезное програмирование\Flappi\Flappi\Flappi\obj\Debug\net6.0-windows\ref\Flappi.dll

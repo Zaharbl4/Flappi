@@ -23,10 +23,15 @@ namespace Flappi
         float graviti;
         int a;
         int speed = 2;
+        
         internal int A { get => a; set => a = value; }
+       
         public Form1()
         {
+
             InitializeComponent();
+            timer1.Interval = 10;//частота обновления движения, гравитации
+            timer1.Tick += new EventHandler(update);           
             Init();
             Invalidate();
         }
@@ -38,7 +43,7 @@ namespace Flappi
         internal TheWall Wall4 { get => wall4; set => wall4 = value; }
         internal TheWall Wall5 { get => wall5; set => wall5 = value; }
         internal TheWall Wall6 { get => wall6; set => wall6 = value; }
-
+        
 
 
        
@@ -47,24 +52,27 @@ namespace Flappi
         {
             Bird = new Player(150, 200);
                
-            Wall1 = new TheWall(425,-200,true);
-            Wall2 = new TheWall(425, 300);
+            Wall1 = new TheWall(625,-200,true);
+            Wall2 = new TheWall(625, 300);
 
-            Wall3 = new TheWall(865, -200, true);
-            Wall4 = new TheWall(865, 300);
+            Wall3 = new TheWall(1065, -200, true);
+            Wall4 = new TheWall(1065, 300);
 
-            Wall5 = new TheWall(1282, -200, true);
-            Wall6 = new TheWall(1282, 300);
+            Wall5 = new TheWall(1482, -200, true);
+            Wall6 = new TheWall(1482, 300);
 
-            timer1.Interval = 10;//частота обновления движения, гравитации
-            timer1.Tick += new EventHandler(update);
+            graviti = 0.5f;
+
+           
             timer1.Start();
+            this.Text = "FlappiBird Score:0";
+            
 
-           
 
-           
 
-           
+
+
+
 
 
         }
@@ -73,7 +81,13 @@ namespace Flappi
         //функция обновления обектов
         private void update(object? sender, EventArgs e)
         {
-          
+            if (bird.y>450)
+            {
+                bird.isAlive = false;
+                timer1.Stop();
+                Init();
+
+            }
 
 
             if ( (Collide(bird, Wall1))|| (Collide(bird, Wall2)) || (Collide(bird, Wall3))|| (Collide(bird, Wall4))|| (Collide(bird, Wall5))|| (Collide(bird, Wall6)))
@@ -88,19 +102,24 @@ namespace Flappi
              
                 bird.gravitiValue += 0.005f;
                  graviti += bird.gravitiValue;//реализация 
-                 bird.y += graviti; 
+                 bird.y += graviti;
+            if (bird.score <= 0)
+            {
+                speed = 2;
 
-           
-                    //гравитации
-               if (bird.isAlive)
-                { 
+            }
+            if (bird.score>10)
+            {
+                speed = 3;
 
-            
+            }
+            if (bird.score>15)
+            {
+                speed = 5;
+
+            }
                 MoveWalls();
-
-                }
-                
-              
+                                    
             Invalidate();
              
 
@@ -108,29 +127,18 @@ namespace Flappi
 
         private bool Collide(Player bird, TheWall Wall )
             
-        {   
-            //предположительно рабочее решение функции столкновения
-            //(bird.x+bird.size / 2) - (wall1.x+wall1.sizeX / 2);     
-            //(bird.size + bird.y / 2) - (wall1.sizeY + wall1.y / 2);
+        {              
             PointF delta = new PointF();
             delta.X = (bird.x + bird.size / 2) - (Wall.x + Wall.sizeX / 2);
-            delta.Y = (bird.size/2 + bird.y) - (Wall.sizeY/2 + Wall.y);
-
-
+            delta.Y = (bird.size/2 + bird.y) - (Wall.sizeY/2 + Wall.y);           
             if (Math.Abs(delta.X) <=60)
             {
-                if ((Math.Abs(delta.Y) < 25+ Wall1.y/2)||(Math.Abs(delta.Y) <= 25+ Wall.y*-1/2 ))
+                if ((Math.Abs(delta.Y) <= 25+ Wall.y/2)||(Math.Abs(delta.Y) <= 70+ Wall.y*-1/2 ))//
                 { 
                     return true;
                     
-                }
-                    
-                   
-                 
-
-            }
-                    return false;
-                   
+                }                                     
+            }                    return false;                   
         }
 
         private void NewWall()//генерация труб
@@ -146,25 +154,43 @@ namespace Flappi
             y2 = r.Next(-74,73);
             y3 = r.Next(-71,76);
 
-            y4 = r.Next(-10,35);
-            y5 = r.Next(-4, 3);
+            y4 = r.Next(-15,40);
+            y5 = r.Next(-6, 5);
             if ( wall1.x<bird.x-220)//
             {
                 Wall1 = new TheWall(1195 - y5, -200-y1, true);
                 Wall2 = new TheWall(1195 - y5, 300-y1-y4);
+                
+                
+                    bird.score++;
+                     this.Text = "FlappiBird Score:" + bird.score;
 
+                
+             
             }
             if (Wall3.x< bird.x - 220)//
             {
                 Wall3 = new TheWall(1195 - y5, -200-y2, true);
                 Wall4 = new TheWall(1195 - y5, 300-y2-y4);
+               
+                
+                    bird.score++;
+                    this.Text = "FlappiBird Score:" + bird.score;
+
+                
+
 
             }
             if (wall5.x  < bird.x - 220)//
             {
-                Wall5 = new TheWall(1195 - y5, -200 - y3-y4, true);
-                Wall6 = new TheWall(1195 - y5, 300 - y3);
+                Wall5 = new TheWall(1195 - y5, -200 - y3, true);
+                Wall6 = new TheWall(1195 - y5, 300 - y3-y4);
+               
+                
+                    bird.score++;
+                    this.Text = "FlappiBird Score:" + bird.score;
 
+                
             }
             
         }
@@ -183,7 +209,7 @@ namespace Flappi
             Wall5.x -= speed;
             Wall6.x -= speed;
             NewWall();
-
+           
 
 
         }

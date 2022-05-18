@@ -17,15 +17,17 @@ namespace Flappi//https://vk.com/video-101965347_456276553
         public Image birdImg;
         public float gravitiValue;
         public bool isAlive;
-
+        public int score;
+        
 
 
 
         public Player(int x, int y)
         {   //фаил текстуры птицы
-            birdImg = new Bitmap("C:\\Users\\User\\Desktop\\бесполезное програмирование\\Flappi\\Flappi\\textures\\bird.png");
+            birdImg = new Bitmap("C:\\Users\\zahar\\OneDrive\\Рабочий стол\\бесполезное програмирование\\Flappi\\Flappi\\Flappi\\textures\\bird.png");
             this.x = x;
             this.y = y;
+
             size = 50;
             gravitiValue = 0.1f;
             isAlive = true;

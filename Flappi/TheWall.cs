@@ -22,7 +22,7 @@ namespace Flappi
 
         public TheWall(int x, int y,bool isRotatedImage=false)
         {   //фаил текстуры трубы
-            theWallImg = new Bitmap("C:\\Users\\User\\Desktop\\бесполезное програмирование\\Flappi\\Flappi\\textures\\tube.png");
+            theWallImg = new Bitmap("C:\\Users\\zahar\\OneDrive\\Рабочий стол\\бесполезное програмирование\\Flappi\\Flappi\\Flappi\\textures\\tube.png");
             this.x = x;
             this.y = y;
             sizeX = 80;
